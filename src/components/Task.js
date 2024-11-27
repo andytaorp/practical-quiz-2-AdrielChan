@@ -13,9 +13,7 @@ export default function Task({ task, onToggleTask, onDeleteTask }) {
         checked={task.completed}
         onChange={() => onToggleTask(task.id)}
       />
-      <span style={{ textDecoration: task.completed ? "line-through" : "none" }}>
-        {task.text}
-      </span>
+      <span>{task.text}</span>
       <button onClick={() => onDeleteTask(task.id)}>Delete</button>
     </li>
   );

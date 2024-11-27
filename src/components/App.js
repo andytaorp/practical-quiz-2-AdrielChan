@@ -10,7 +10,7 @@ function App() {
     if (newTask.trim() === "") return;
     setTasks((prevTasks) => [
       ...prevTasks,
-      { id: Date.now(), text: newTask, completed: false },
+      { id: Date.now(), text: newTask.trim(), completed: false },
     ]);
   };
 
