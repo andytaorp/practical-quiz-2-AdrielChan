@@ -7,6 +7,7 @@ function App() {
 
   const handleAddTask = (newTask) => {
     // TODO: write code to add a new task
+    if (newTask.trim() === "") return;
     setTasks((prevTasks) => [
       ...prevTasks,
       { id: Date.now(), text: newTask, completed: false },
@@ -31,7 +32,7 @@ function App() {
     <div className="app">
       <h1>Task Tracker</h1>
       {/*TODO: add a form to add a new task*/}
-      <Form onAddTask={handleAddTask}/>
+      <Form onAddTask={handleAddTask} />
       {/*TODO: add a list of tasks*/}
       <TaskList
         tasks={tasks}

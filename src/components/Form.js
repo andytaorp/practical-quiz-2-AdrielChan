@@ -6,8 +6,8 @@ export default function Form({ onAddTask }) {
   const handleSubmit = (e) => {
     // TODO: write code to handle form submission
     e.preventDefault();
-    if (description.trim() === "") return; 
-    onAddTask(description);
+    if (description.trim() === "") return;
+    onAddTask(description.trim());
     setDescription("");
   };
 
