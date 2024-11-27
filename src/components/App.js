@@ -7,10 +7,9 @@ function App() {
 
   const handleAddTask = (newTask) => {
     // TODO: write code to add a new task
-    if (newTask.trim() === "") return;
     setTasks((prevTasks) => [
       ...prevTasks,
-      { id: Date.now(), text: newTask.trim(), completed: false },
+      { id: Date.now(), text: newTask, completed: false },
     ]);
   };
 

@@ -7,11 +7,12 @@ export default function Form({ onAddTask }) {
     // TODO: write code to handle form submission
     e.preventDefault();
     if (description.trim() === "") return;
-    onAddTask(description.trim());
+    onAddTask(description);
     setDescription("");
   };
 
   return (
+    /*TODO: add a form to add a new task*/
     <form onSubmit={handleSubmit}>
       <input
         type="text"
